@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziraa | Menu</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #ffffff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    .video-background {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -2;
+      filter: brightness(0.5) contrast(1.1);
+    }
+
+    .animated-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(120deg, rgba(0, 80, 0, 0.3), rgba(0, 150, 0, 0.2), rgba(0, 100, 0, 0.4));
+      animation: gradientShift 10s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .video-overlay {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+
+    .video-overlay img {
+      max-width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .video-overlay h1 {
+      font-size: 3.2em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .video-overlay p {
+      font-size: 1.3em;
+      max-width: 700px;
+      margin-bottom: 40px;
+      opacity: 0.85;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 1100px;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .menu-item {
+      position: relative;
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(0, 255, 100, 0.3);
+      border-radius: 20px;
+      padding: 40px 25px;
+      text-align: center;
+      color: #ffffff;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 12px 25px rgba(0, 255, 100, 0.1);
+      cursor: pointer;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 255, 100, 0.3);
+      border-color: rgba(144, 255, 175, 0.5);
+    }
+
+    .menu-item::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      z-index: -1;
+      background: linear-gradient(135deg, #7cf37c, #58a352, #006400);
+      background-size: 400% 400%;
+      border-radius: 22px;
+      animation: pulseBorder 10s ease infinite;
+      filter: blur(8px);
+      opacity: 0.4;
+    }
+
+    @keyframes pulseBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .menu-item i {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #ffffff; /* White icons */
+  animation: iconGlow 2.5s ease-in-out infinite;
+}
+
+
+    @keyframes iconGlow {
+      0%, 100% { text-shadow: 0 0 10px #7cf37c; }
+      50% { text-shadow: 0 0 20px #a8fba8; }
+    }
+
+    .menu-item span {
+      display: block;
+      font-size: 1.4em;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .back-button {
+      padding: 14px 30px;
+      font-size: 1em;
+      background: linear-gradient(to right, #58a352, #3a7d3a);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .back-button:hover {
+      background: #004d00;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .video-overlay h1 {
+        font-size: 2.2em;
+      }
+
+      .menu-item i {
+        font-size: 46px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .video-overlay p {
+        font-size: 1.1em;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-background">
+    <video autoplay loop muted>
+      <source src="vecteezy_beautiful-aerial-view-of-nature-on-the-hill-of-agricultural_9278994.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="animated-overlay"></div>
+
+    <div class="video-overlay">
+      <img src="ziraa-logo.png" alt="Ziraa Logo" />
+      <h1>Welcome to Ziraa</h1>
+      <p>Explore our mission, understand the problem, and discover our innovative solutions for the future of agriculture.</p>
+
+      <div class="menu-grid">
+        <a href="evidence.html">
+          <div class="menu-item">
+            <i class="fas fa-video"></i>
+            <span>Evidence</span>
+          </div>
+        </a>
+        <a href="problem.html">
+          <div class="menu-item">
+            <i class="fas fa-triangle-exclamation"></i> <!-- ⚠️ New solid white icon -->
+            <span>Problem</span>
+          </div>
+        </a>
+        
+        <a href="solution.html">
+          <div class="menu-item">
+            <i class="fas fa-lightbulb"></i>
+            <span>Solution</span>
+          </div>
+        </a>
+        <a href="contact.html">
+          <div class="menu-item">
+            <i class="fas fa-envelope-open-text"></i>
+            <span>Contact Us</span>
+          </div>
+        </a>
+      </div>
+
+      <a href="index.html">
+        <button class="back-button">← Back to Home</button>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

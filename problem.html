@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziraa | Meet the Team</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #f4fdfb;
+      overflow-x: hidden;
+      height: 100%; /* Ensure full height for the body */
+    }
+
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Ensure it's behind the content */
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      overflow: auto; /* Allow scrolling for the content */
+      padding-top: 80px; /* Space for the page title */
+    }
+
+    .video-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* Keep the video in the background */
+    }
+
+    .overlay-heading {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      font-size: 4em;
+      text-align: center;
+      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+      background-color: #c8f4e6;
+      color: #333;
+    }
+
+    .section:nth-of-type(even) {
+      background-color: #e0f7f1;
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #157a6e;
+    }
+
+    .section p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #00695c;
+    }
+
+    .back-button {
+      margin-top: 60px;
+      padding: 14px 30px;
+      font-size: 1em;
+      background-color: #26a69a;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #004d40;
+    }
+
+    @media (max-width: 768px) {
+      .overlay-heading {
+        font-size: 2.5em;
+      }
+
+      .section h2 {
+        font-size: 2em;
+      }
+
+      .section p {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section with Background Video -->
+  <section class="video-section">
+    <video id="bgVideo" autoplay muted loop>
+      <source src="2848072-uhd_3840_2160_30fps.mp4" type="video/mp4">
+      <source src="farm-problem.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-heading">
+      <i class="fas fa-leaf"></i> The Problem
+    </div>
+  </section>
+  
+  <div class="content-wrapper">
+     <!-- Section 1 -->
+  <section class="section">
+    <h2>It Starts With A Farmer</h2>
+    <p>
+      Before any meal reaches your plate, it begins with a farmer. A farm. A seed in the soil.<br/>
+      From planting to harvest, that journey is long — and increasingly uncertain.
+    </p>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="section">
+    <h2>Imagine the Struggles</h2>
+    <p>
+      What if the farm couldn’t find enough workers to harvest in time?<br/>
+      What if a pest wiped out half the orchard before anyone noticed?<br/>
+      What if rising heat and erratic rainfall made growing nearly impossible?
+      <br/><br/>
+      Now imagine that’s not just one apple or carrot — but <span class="highlight">millions</span>, every day.
+      Food isn’t just fuel — it’s <span class="highlight">life</span>.
+    </p>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="section">
+    <h2>A Global Crisis</h2>
+    <p>
+      Agriculture today is unable to produce sufficient amounts of food due to <span class="highlight">labor shortages, imprecise farming, unsustainable methods, and high-tech costs</span>.
+      <br/><br/>
+      According to the FAO, <span class="highlight">40% of global crops are lost annually</span> due to pests and diseases. In 2024, the U.S. agricultural industry needed 2.4 million more farm workers — and that gap is growing.
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="section">
+    <h2>The Root of the Problem</h2>
+    <p>
+      While the world gets <span class="highlight">smarter, faster, and more digital</span>, agriculture still depends on <span class="highlight">manual labor, guesswork, and hope</span>.
+      <br/><br/>
+      And the ones feeding us — <span class="highlight">farmers</span> — are struggling to survive.
+    </p>
+  </section>
+
+  <!-- Personal Mission -->
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p>
+      While our focus begins with farms in the UAE, our dream extends beyond.<br/>
+      <strong>Project Ziraa</strong> is our commitment to building affordable agricultural automation for low-income communities across the world.
+      <br/><br/>
+      It's more than tech — it's a movement to <span class="highlight">grow smarter, together</span>.
+    </p>
+    <a href="menu.html"><button class="back-button">← Back to Menu</button></a>
+  </section>
+  </div>
+</body>
+</html>

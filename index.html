@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziraa | Smart Agriculture Innovation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1f1f1f;
+    }
+
+    /* Video Background */
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-section video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+
+    .hero-content {
+      z-index: 2;
+      padding: 0 20px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #3a9a3a;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0f3d2e;
+    }
+
+    section p, section ul {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #0f3d2e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-section">
+    <video autoplay muted loop>
+      <source src="vecteezy_a-farmer-inspecting-the-growth-of-crops-using-a-tablet-with_47880059.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h1>Project Ziraa</h1>
+      <p>
+      Revolutionizing farming with intelligent automation.</p>
+      <a href="#about" class="cta-button">Explore Our Vision</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a group of ambitious students and changemakers building tech to solve real-world problems. Ziraa is our smart farming solution, designed to automate crop management and support sustainable agriculture through AI and robotics.</p>
+    <div style="text-align: center; margin-top: 20px;">
+    <a href="team.html" class="cta-button">Learn More About Us</a>
+    </div>
+  </section>
+
+  <section id="why">
+    <h2>Why Ziraa?</h2>
+    <ul>
+      <li><strong>🌍 The Problem:</strong> Global agriculture faces growing challenges from climate change, labor shortages, and rising food demand.</li>
+      <li><strong>🤖 The Solution:</strong> Ziraa empowers farmers with automation—crop monitoring, irrigation, soil analysis, and smart decisions using AI.</li>
+      <li><strong>💚 The Impact:</strong> Greater productivity, smarter farming, and a sustainable future for everyone.</li>
+    </ul>
+  </section>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p><em>"To reshape agriculture using technology—making farming smarter, cleaner, and future-ready."</em></p>
+  </section>
+  <div style="text-align: center; margin-top: 10px; margin-bottom: 100px;">
+    <a href="menu.html" class="cta-button">Menu</a>
+  </div>
+  <footer>
+    <p>© 2025 Ziraa Project | Created by Code and Crops</p>
+  </footer>
+
+</body>
+</html>

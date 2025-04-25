@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ziraa | Our Solution</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #f4fdfb;
+      overflow-x: hidden;
+      height: 100%;
+    }
+
+    #bgVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      overflow: auto;
+    }
+
+    .overlay-heading {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 4em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+      z-index: 2;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #222;
+      border-radius: 16px;
+      margin-bottom: 3rem;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .section h2 {
+      font-size: 2.5em;
+      color: #0e5d4f;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.2em;
+      line-height: 1.8;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+      padding-top: 1rem;
+    }
+
+    .feature-card {
+      position: relative;
+      background: #ffffffee;
+      padding: 2.5rem 1.5rem 2rem;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: floaty 4s ease-in-out infinite;
+    }
+
+    .feature-card:hover {
+      transform: rotate(-1deg) scale(1.03);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+      position: relative;
+      z-index: 2;
+      font-size: 2.2rem;
+      color: white;
+      background-color: #26a69a;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      top: -30px;
+      left: -30px;
+      background: radial-gradient(circle at center, #26a69a 30%, transparent 80%);
+      border-radius: 50%;
+      opacity: 0.2;
+      z-index: 1;
+      transform: rotate(45deg);
+    }
+
+    .feature-card h3 {
+      color: #157a6e;
+      font-size: 1.4em;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      z-index: 2;
+      position: relative;
+    }
+
+    .feature-card p {
+      font-size: 1.05em;
+      color: #333;
+      text-align: center;
+      z-index: 2;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .back-button {
+      margin-top: 60px;
+      padding: 14px 30px;
+      font-size: 1em;
+      background-color: #26a69a;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #004d40;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floaty {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .overlay-heading {
+        font-size: 2.5em;
+      }
+
+      .section h2 {
+        font-size: 2em;
+      }
+
+      .section p {
+        font-size: 1.1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <section class="video-section">
+    <video id="bgVideo" autoplay muted loop>
+      <source src="vecteezy_a-red-tractor-with-a-sprayer-sprays-agricultural-fields-with_49930152.mp4" type="video/mp4">
+      <source src="farm-problem.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-heading">
+      <i class="fas fa-tractor"></i> Our Solution
+    </div>
+  </section>
+
+  <div class="content-wrapper">
+
+    <!-- About Ziraa -->
+    <section class="section">
+      <h2>What is Ziraa?</h2>
+      <p>"Ziraa" means agriculture in Arabic — and for us, it means <strong>hope</strong>, <strong>innovation</strong>, and <strong>empowerment</strong>. Our mission is to automate and support farms using intelligent, affordable, and sustainable solutions.</p>
+    </section>
+
+    <!-- Key Features -->
+    <section class="section">
+      <h2>Key Features</h2>
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">🍓</div>
+          <h3>Fruit Picking Bot</h3>
+          <p>Detects the ripeness of fruits and picks them with care using advanced sensors and robotic arms.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>Precision Farming</h3>
+          <p>Uses IoT sensors to monitor soil moisture, temperature, and crop health in real time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🍎</div>
+          <h3>Quality Checking Bot</h3>
+          <p>Scans and sorts fruits based on their quality and health condition before packaging.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🐛</div>
+          <h3>Plant Doctor</h3>
+          <p>Detects pests and weeds and uses natural pesticide sprays or lasers to treat them sustainably.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚜</div>
+          <h3>AgroPilot</h3>
+          <p>Performs seeding, ploughing, and weeding automatically, making agriculture efficient and less labor-intensive.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why it matters -->
+    <section class="section">
+      <h2>How It Helps</h2>
+      <p>Ziraa bridges the gap between <strong>high-tech solutions</strong> and <strong>low-income farming communities</strong>. It boosts productivity, reduces crop loss, and supports farmers with technology that’s smart, scalable, and sustainable.</p>
+    </section>
+
+    <!-- USP -->
+    <section class="section">
+      <h2>What Makes Ziraa Unique?</h2>
+      <p>Unlike other solutions, Ziraa is designed from the ground up for <strong>small and medium farms</strong>. It combines AI, robotics, and green practices in one modular system — <span style="font-weight: bold; color: #00695c;">affordable, local, and life-changing</span>.</p>
+      <a href="menu.html"><button class="back-button">← Back to Menu</button></a>
+    </section>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Ziraa | Evidence</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      height: 100%;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #e6fff4, #d0f5e9);
+      background-size: 400% 400%;
+      animation: backgroundShift 20s ease infinite;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .content-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #004d40;
+      text-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.75);
+      border: 2px solid rgba(0, 150, 136, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 0 25px rgba(0, 150, 136, 0.1);
+      animation: slideUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .section h2 {
+      font-size: 2.3rem;
+      color: #00796b;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .glow-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #b2f2e1, transparent);
+      opacity: 0.15;
+      animation: pulse 8s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    .circle1 { width: 200px; height: 200px; top: 5%; left: 10%; }
+    .circle2 { width: 150px; height: 150px; bottom: 15%; right: 8%; animation-delay: 2s; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.15; }
+      50% { transform: scale(1.2); opacity: 0.3; }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .section h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-circle circle1"></div>
+  <div class="glow-circle circle2"></div>
+
+  <div class="content-wrapper">
+    <h1><i class="fas fa-microscope"></i> Evidence Vault</h1>
+
+    <section class="section">
+      <h2>🚌 Field Visit Evidence</h2>
+      <p>Our team visited <strong>Wadi Al Amardi</strong>, a desert farming location in the UAE, where we observed firsthand the challenges of growing crops in arid conditions. We documented the struggles faced by farmers, such as inefficient irrigation, inconsistent soil quality, and high temperatures. This trip provided vital insights into the type of solutions needed for sustainable agriculture in similar harsh environments.</p>
+    </section>
+
+    <section class="section">
+      <h2>🧠 Expert Opinion Evidence</h2>
+      <p>We consulted with <strong>Dr. B. Sathya Bama</strong>, Professor in the Department of Electronics and Communication Engineering at Thiagarajar College of Engineering, Madurai. She is an expert in Image Processing (including satellite and hyperspectral imaging), as well as Artificial Intelligence, Machine Learning, and Deep Learning. Her guidance on the integration of AI with real-time agricultural data helped shape the vision and technical components of Project Ziraa.</p>
+    </section>
+
+  </div>
+
+</body>
+</html>
